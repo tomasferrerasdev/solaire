@@ -6,3 +6,4 @@ export * from "./slider";
 export * from "./switch";
 export * from "./card";
 export * from "./chart";
+export * from "./select";
