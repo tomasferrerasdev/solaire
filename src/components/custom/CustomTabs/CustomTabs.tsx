@@ -5,7 +5,7 @@ import { PotentialAnalysis } from "./PotentialAnalysis/PotentialAnalysis";
 
 export const CustomTabs = () => {
   return (
-    <Tabs defaultValue="account">
+    <Tabs defaultValue="insights">
       <TabsList className="grid grid-cols-3 text-sm w-[400px] mb-6">
         <TabsTrigger value="insights">Building insights</TabsTrigger>
         <TabsTrigger value="data-layer">Data layer</TabsTrigger>
