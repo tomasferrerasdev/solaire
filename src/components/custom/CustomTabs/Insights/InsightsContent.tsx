@@ -1,4 +1,4 @@
-import { Input, Slider, Switch, TabsContent } from "@/components";
+import { InfoCard, Input, Slider, Switch, TabsContent } from "@/components";
 
 export const InsightsContent = () => {
   return (
@@ -28,6 +28,9 @@ export const InsightsContent = () => {
       <div className="flex items-center gap-2">
         <Switch />
         <p className="font-semibold text-sm">Toggle panels visibility</p>
+      </div>
+      <div className="absolute right-6 top-6 z-10">
+        <InfoCard />
       </div>
     </TabsContent>
   );
