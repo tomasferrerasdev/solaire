@@ -92,6 +92,13 @@ export const NavbarMenu = () => {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/">
+              <NavigationMenuLink className="text-sm py-2 px-4 font-medium">
+                Account
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
     </nav>
