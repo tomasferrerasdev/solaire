@@ -1,3 +1,5 @@
+@import "material-symbols";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,4 +49,28 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
+}
+
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.center-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.uv-gradient {
+  background: linear-gradient(
+    90deg,
+    #04000e 0%,
+    #930298 22.5%,
+    #d43733 44.5%,
+    #fca902 67%,
+    #fffdf0 89.5%
+  );
 }
