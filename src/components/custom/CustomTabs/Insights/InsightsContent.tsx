@@ -1,4 +1,5 @@
-import { InfoCard, Input, Slider, Switch, TabsContent } from "@/components";
+import { Input, Slider, Switch, TabsContent } from "@/components";
+import { InfoCard } from "./InfoCard/InfoCard";
 
 export const InsightsContent = () => {
   return (
@@ -6,7 +7,7 @@ export const InsightsContent = () => {
       <div className="text-sm max-w-[370px] mb-8">
         <p className="font-semibold mb-1">Yearly energy: 124.61 MWh</p>
         <p>
-          Building Insights endpoint provides data on the location, dimensions &
+          Building Insights endpoint provides data on the location, dimensions &
           solar potential of a building.
         </p>
       </div>
