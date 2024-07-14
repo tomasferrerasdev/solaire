@@ -57,3 +57,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.uv-gradient {
+  background: linear-gradient(
+    90deg,
+    #04000e 0%,
+    #930298 22.5%,
+    #d43733 44.5%,
+    #fca902 67%,
+    #fffdf0 89.5%
+  );
+}
