@@ -1,15 +1,10 @@
-import {
-  NavbarMenu,
-  AddressSearchbar,
-  CustomTabs,
-  InfoCard,
-} from "@/components";
+import { NavbarMenu, AddressSearchbar, CustomTabs } from "@/components";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="w-full bg-white">
-      <section className="min-h-screen w-full grid grid-cols-12 gap-5">
+      <section className="min-h-screen w-full grid grid-cols-12 gap-5 relative">
         <article className="col-span-4 px-5 w-full">
           <NavbarMenu />
           <AddressSearchbar />
@@ -22,9 +17,6 @@ export default function Home() {
             alt="map"
             className="object-cover"
           />
-          <div className="absolute right-6 top-6">
-            <InfoCard />
-          </div>
         </aside>
       </section>
     </main>
