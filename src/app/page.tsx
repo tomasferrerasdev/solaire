@@ -10,13 +10,15 @@ export default function Home() {
           <AddressSearchbar />
           <CustomTabs />
         </article>
-        <aside className="col-start-6 col-end-13 bg-black relative">
-          <Image
-            src={`/images/placeholder/map.png`}
-            fill
-            alt="map"
-            className="object-cover"
-          />
+        <aside className="col-start-5 col-end-13 relative">
+          <div className="sticky top-0 right-0 w-full h-screen">
+            <Image
+              src={`/images/placeholder/map.png`}
+              fill
+              alt="map"
+              className="object-cover"
+            />
+          </div>
         </aside>
       </section>
     </main>

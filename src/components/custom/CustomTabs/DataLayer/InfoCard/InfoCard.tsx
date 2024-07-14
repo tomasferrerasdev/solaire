@@ -18,7 +18,7 @@ export const InfoCard = () => {
           </p>
 
           <div>
-            <div className="h-5 w-full uv-gradient border border-black rounded-lg mb-1"></div>
+            <div className="h-4 w-full uv-gradient border border-black rounded-lg mb-1"></div>
             <div className="flex items-center justify-between">
               <p>shady</p>
               <p>sunny</p>

@@ -30,7 +30,7 @@ export const InsightsContent = () => {
         <Switch />
         <p className="font-semibold text-sm">Toggle panels visibility</p>
       </div>
-      <div className="absolute right-6 top-6 z-10">
+      <div className="fixed right-6 top-6 z-10">
         <InfoCard />
       </div>
     </TabsContent>

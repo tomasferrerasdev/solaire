@@ -51,6 +51,12 @@
   }
 }
 
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .center-element {
   position: absolute;
   top: 50%;

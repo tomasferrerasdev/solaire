@@ -64,7 +64,7 @@ export const DataLayer = () => {
           <p>Play yearly months animation</p>
         </div>
       </div>
-      <div className="absolute right-6 top-6 z-10">
+      <div className="fixed right-6 top-6 z-10">
         <InfoCard />
       </div>
     </TabsContent>
