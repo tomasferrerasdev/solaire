@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Loader } from "@googlemaps/js-api-loader";
 import { NavbarMenu, AddressSearchbar, CustomTabs } from "@/components";
 import { getClosestBuilding } from "@/actions/get-closest-building";
 
