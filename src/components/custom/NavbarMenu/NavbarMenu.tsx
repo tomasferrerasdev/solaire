@@ -93,10 +93,8 @@ export const NavbarMenu = () => {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/">
-              <NavigationMenuLink className="text-sm py-2 px-4 font-medium">
-                Account
-              </NavigationMenuLink>
+            <Link href="/" className="text-sm py-2 px-4 font-medium">
+              Account
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
