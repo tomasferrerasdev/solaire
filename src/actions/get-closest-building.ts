@@ -1,6 +1,11 @@
+import { BuildingInsightsResponse } from "@/interfaces/solar-api";
+
 const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 
-export async function getClosestBuilding(location: any, apiKey = API_KEY) {
+export const getClosestBuilding = async (
+  location: any,
+  apiKey = API_KEY
+): Promise<BuildingInsightsResponse> => {
   const args = {
     "location.latitude": location.lat,
     "location.longitude": location.lng,
@@ -22,4 +27,4 @@ export async function getClosestBuilding(location: any, apiKey = API_KEY) {
     console.log("buildingInsightsResponse", content);
     return content;
   });
-}
+};
