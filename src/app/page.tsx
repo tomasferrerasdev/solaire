@@ -3,12 +3,6 @@ import { NavbarMenu, AddressSearchbar, CustomTabs } from "@/components";
 import { getClosestBuilding } from "@/actions/get-closest-building";
 
 export default async function Home() {
-  const res = await getClosestBuilding({
-    lat: 37.7749,
-    lng: -122.4194,
-  });
-  console.log(res);
-
   return (
     <main className="w-full bg-white">
       <section className="min-h-screen w-full grid grid-cols-12 gap-5 relative">
