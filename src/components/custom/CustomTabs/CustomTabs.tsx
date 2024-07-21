@@ -3,7 +3,7 @@ import { InsightsContent } from "./Insights/InsightsContent";
 import { DataLayer } from "./DataLayer/DataLayer";
 import { PotentialAnalysis } from "./PotentialAnalysis/PotentialAnalysis";
 
-export const CustomTabs = () => {
+export const CustomTabs = async () => {
   return (
     <Tabs defaultValue="insights">
       <TabsList className="grid grid-cols-3 text-sm w-[400px] mb-6">
