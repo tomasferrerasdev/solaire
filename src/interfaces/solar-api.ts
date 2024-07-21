@@ -100,3 +100,7 @@ export interface Date {
   month: number;
   day: number;
 }
+
+export interface SolarApiProps {
+  data: BuildingInsightsResponse;
+}

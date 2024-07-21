@@ -9,9 +9,9 @@ import {
 } from "@/components";
 import { INFOCARD_INSIGHTS } from "./data";
 import { RadialBarChart, RadialBar, Label, PolarRadiusAxis } from "recharts";
+import { SolarApiProps } from "@/interfaces/solar-api";
 
-export const InfoCard = () => {
-  const { id, title, info } = INFOCARD_INSIGHTS[0];
+export const InfoCard = ({ data }: SolarApiProps) => {
   const chartConfig = {
     visitors: {
       label: "Visitors",
@@ -24,21 +24,41 @@ export const InfoCard = () => {
   const chartData = [
     { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
   ];
+
+  const {
+    solarPotential: {
+      maxSunshineHoursPerYear,
+      maxArrayAreaMeters2,
+      maxArrayPanelsCount,
+      carbonOffsetFactorKgPerMwh,
+    },
+  } = data;
+
   return (
     <div className="flex flex-col gap-2">
       <Card className="w-[350px]">
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle>Building Insights</CardTitle>
           <hr />
         </CardHeader>
         <CardContent className="grid gap-4 text-sm">
           <ul className="flex flex-col gap-1">
-            {info.map((item) => (
-              <li key={item.id} className="flex justify-between">
-                <span className="font-semibold">{item.title}</span>
-                <span>{item.value}</span>
-              </li>
-            ))}
+            <li className="flex justify-between">
+              <span className="font-semibold">Annual sunshine</span>
+              <span>{Math.trunc(maxSunshineHoursPerYear)} m2</span>
+            </li>
+            <li className="flex justify-between">
+              <span className="font-semibold">Roof area</span>
+              <span>{Math.trunc(maxArrayAreaMeters2)} m2</span>
+            </li>
+            <li className="flex justify-between">
+              <span className="font-semibold">Max. panel count</span>
+              <span>{Math.trunc(maxArrayPanelsCount)} panels</span>
+            </li>
+            <li className="flex justify-between">
+              <span className="font-semibold">Potential CO2 savings</span>
+              <span>{Math.trunc(carbonOffsetFactorKgPerMwh)} Kg/MWh</span>
+            </li>
           </ul>
         </CardContent>
       </Card>
@@ -63,7 +83,7 @@ export const InfoCard = () => {
                 <RadialBar dataKey="visitors" background cornerRadius={10} />
               </RadialBarChart>
             </ChartContainer>
-            <p>209 / 315</p>
+            <p>209 / {maxArrayPanelsCount}</p>
           </div>
           <div className="flex flex-col gap-4 items-center text-sm flex-1 relative">
             <span className="material-symbols-rounded text-2xl center-element">
